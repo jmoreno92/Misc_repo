@@ -11,13 +11,19 @@
 <body>
     <p>HOLA MUNDO!</p>
 
+
     ESTA ES una prueba. Wow no mames!! esto funciona muy bien
+
+
+    <button>Start machine</button>
+    <p>The machine is stopped.</p>
+
+
     <script>
         // Your JavaScript goes here!
         console.log("Hello, World!")
 
         console.log((3 + 2) - 76 * (1 + 1))
-
 
         let a = 10
         console.log(a)
@@ -34,6 +40,29 @@
         console.log(percentage)
 
 
+        const btn = document.querySelector("button");
+        const txt = document.querySelector("p");
+
+        btn.addEventListener("click", updateBtn);
+
+        function updateBtn() {
+            if (btn.textContent === "Start machine") {
+                btn.textContent = "Stop machine";
+                txt.textContent = "The machine has started!";
+            } else {
+                btn.textContent = "Start machine";
+                txt.textContent = "The machine is stopped.";
+            }
+        }
+
+
+        let ax = 1, bx = 1;
+        let c = ++ax; // ?
+        let d = bx++; // ?
+        console.log(ax)
+        console.log(bx)
+        console.log(c)
+        console.log(d)
     </script>
 
 </body>
