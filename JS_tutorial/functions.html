@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    Hola mundo! :)
+
+    <input id="textBox" type="text" />
+    <div id="output"></div>
+
+
+    <script>
+
+        // // Simple Alert
+        // function myFunction() {
+        //     alert("hello");
+        // }
+        // myFunction();
+        // // calls the function once
+
+
+        // // Draw Function
+        // function draw() {
+        //     ctx.clearRect(0, 0, WIDTH, HEIGHT);
+        //     for (let i = 0; i < 100; i++) {
+        //         ctx.beginPath();
+        //         ctx.fillStyle = "rgb(255 0 0 / 50%)";
+        //         ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+        //         ctx.fill();
+        //     }
+        // }
+        // draw();
+
+
+        const textBox = document.querySelector("#textBox");
+        const output = document.querySelector("#output");
+
+        textBox.addEventListener("keydown", (event) => {
+            output.textContent = `You pressed "${event.key}".`;
+        });
+
+
+    </script>
+
+</body>
+
+</html>
