@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>wow!</h1>
+
+    <p>
+        Life is amazing :)
+    </p>
+
+
+    <p>
+        Jorgito is having a great time
+    </p>
+
+    <p>Esto esta increible! :D</p>
+
+
+    <script>
+
+
+        function sum(param1, param2) {
+            return param1 + param2;
+        }
+
+
+        function add7(num) {
+            return num + 7;
+        }
+
+        function multiply(param1, param2) {
+            return param1 * param2;
+        }
+
+        function capitalize(str) {
+            let firstLetter = str.charAt(0).toUpperCase()
+            let remainingLetters = str.substring(1).toLowerCase()
+            let Word = firstLetter + remainingLetters;
+            return Word
+        }
+
+        function lastLetter(str) {
+            let letter = str.at(-1)
+            return letter
+        }
+
+
+        console.log("Hello, World!")
+        console.log(sum(1, 2))
+        console.log(add7(10))
+        console.log(multiply(3, 2))
+
+        console.log(capitalize("abcd"))
+        console.log(capitalize("ABCD"))
+        console.log(capitalize("aBcD"))
+
+        console.log(lastLetter("abcd"))
+        console.log(lastLetter("Jorgito"))
+
+
+    </script>
+
+</body>
+
+</html>
