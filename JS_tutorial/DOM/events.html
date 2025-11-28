@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <!-- Reference: https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#targeting-nodes-with-selectors -->
+
+    <!-- Method 1 -->
+    <button onclick="alert('Hello World with Method 1')">Click Me</button>
+
+    <!-- Method 2 and 3 -->
+    <!-- the HTML file -->
+    <button id="btn2">Click Me</button>
+    <button id="btn3">Click Me Too</button>
+
+    <script>
+        // Method 2
+        const btn_2 = document.querySelector("#btn2");
+        btn_2.onclick = () => alert("Hello World with Method 2");
+        // Arrof function: https://javascript.info/arrow-functions-basics
+
+        // Method 3
+        const btn_3 = document.querySelector("#btn3");
+        btn_3.addEventListener("click", () => {
+            alert("Hello World with Method 3");
+        });
+    </script>
+
+</body>
+
+</html>

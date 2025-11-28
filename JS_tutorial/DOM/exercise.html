@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<!-- your HTML file: -->
+
+<body>
+    <h1>THE TITLE OF YOUR WEBPAGE</h1>
+    <div id="container"></div>
+
+    <!-- Reference: https://www.theodinproject.com/lessons/foundations-dom-manipulation-and-events#exercise -->
+
+
+    <script>
+        // your JavaScript file
+        const container = document.querySelector("#container");
+        const content = document.createElement("div");
+        content.classList.add("content");
+        content.textContent = "This is the glorious text-content!";
+        container.appendChild(content);
+
+
+
+        // JM's code
+        const red_p = document.createElement("p");
+        // red_p.classList.add("content");
+        red_p.textContent = "Hey I am red!";
+        red_p.style.color = "red";
+        container.appendChild(red_p);
+
+        const blue_h3 = document.createElement("h3");
+        // red_p.classList.add("content");
+        blue_h3.textContent = "I am a blue h3!";
+        blue_h3.style.color = "blue";
+        container.appendChild(blue_h3);
+
+        const div = document.createElement("div");
+        div.style.border = "1px solid black";
+        div.style.backgroundColor = "pink";
+
+        const divH1 = document.createElement("h1");
+        divH1.textContent = "I'm in a div";
+
+        const divP = document.createElement("p");
+        divP.textContent = "ME TOO!"
+
+        div.appendChild(divH1);
+        div.appendChild(divP);
+
+
+        container.appendChild(div);
+
+
+
+
+    </script>
+
+
+    <!-- The DOM -->
+    <!-- <body>
+  <h1>THE TITLE OF YOUR WEBPAGE</h1>
+  <div id="container">
+    <div class="content">This is the glorious text-content!</div>
+  </div>
+</body> -->
+
+</body>
+
+
+<body>
+
+</body>
+
+</html>

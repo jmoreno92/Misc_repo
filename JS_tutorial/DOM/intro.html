@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model (DOM)</title>
+</head>
+
+<body>
+
+    <p>Hola mundo! :)</p>
+    <div id="container">
+        <div class="display"></div>
+        <div class="controls"></div>
+    </div>
+
+    <script>
+
+        console.log("Hola mundo! :D")
+
+        // selects the #container div (don't worry about the syntax, we'll get there)
+        const container = document.querySelector("#container");
+        console.log(container);
+        // selects the first child of #container => .display
+        const display1 = container.firstElementChild;
+        console.log(display1);  // <div class="display"></div>
+
+
+        // selects the .controls div
+        const controls = document.querySelector(".controls");
+        console.log(controls);
+        // selects the prior sibling => .display
+        const display2 = controls.previousElementSibling;
+        console.log(display2); // <div class="display"></div>
+    </script>
+
+
+</body>
+
+</html>
