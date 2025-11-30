@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping list example</title>
+  <style>
+    li {
+      margin-bottom: 10px;
+    }
+
+    li button {
+      font-size: 12px;
+      margin-left: 20px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>My shopping list</h1>
+
+  <form>
+    <label for="item">Enter a new item:</label>
+    <input type="text" name="item" id="item">
+    <button>Add item</button>
+  </form>
+
+  <ul>
+
+  </ul>
+
+  <script>
+
+    // Reference:  https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#creating_a_dynamic_shopping_list
+
+
+    // Get references to list, input and button
+    const list = document.querySelector("ul");
+    const input = document.querySelector("input");
+    const btn = document.querySelector("button");
+
+
+    // Add event listener to button
+    btn.addEventListener("click", function (event) {
+      event.preventDefault();   // Prevent form submission/refresh
+
+
+      // Store value of input in variable
+      const item = input.value;
+
+      // Ignore empty entries (optional but nice)
+      if (item.trim() === "") {
+        input.value = "";
+        input.focus();
+        return;
+      }
+
+      // Clear input element by setting its value to empty string
+      input.value = "";
+
+      // Create three new elements — a list item (<li>), a <span>, and a <button> — and store them in variables.
+      const li = document.createElement("li");
+      const span = document.createElement("span");
+      const deleteBn = document.createElement("button");
+
+      // Append span and delete button to li
+      li.appendChild(span);
+      li.appendChild(deleteBn);
+
+      // Set the text content of the span to the input value and set text content of button to 'Delete'
+      span.textContent = item;
+      deleteBn.textContent = 'Delete';
+
+      // Append the list item to the list
+      list.appendChild(li);
+
+      // Attach an event handler to the Delete
+      deleteBn.addEventListener('click', function () {
+        list.removeChild(li);
+      });
+
+      // Focus the input element, so it's ready for entering the next shopping list item
+      input.focus();
+
+    });
+
+
+  </script>
+</body>
+
+</html>
